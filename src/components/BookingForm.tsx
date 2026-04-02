@@ -6,9 +6,10 @@ export default function BookingForm() {
     <section id="booking" className="booking">
       <div className="booking-container">
 
-        {/* LEFT CONTENT */}
+        {/* LEFT */}
         <div className="booking-info">
           <h2>ĐẶT XE NHANH – ĐÓN TRẢ TẬN NƠI</h2>
+
           <p>
             Nhà xe <strong>Minh Ngọc</strong> nhận đặt xe tiện chuyến
             Hà Nội ⇄ Nam Định, đưa đón sân bay, bệnh viện, nhà riêng.
@@ -25,18 +26,25 @@ export default function BookingForm() {
           </div>
         </div>
 
-        {/* RIGHT FORM */}
-        <div className="booking-form">
-          <h3>GỬI YÊU CẦU ĐẶT XE</h3>
+        {/* RIGHT */}
+        <div className="booking-cta">
+          <h3>ĐẶT XE NGAY</h3>
 
-          <form>
-            <input type="text" placeholder="Họ và tên" required />
-            <input type="tel" placeholder="Số điện thoại" required />
-            <input type="text" placeholder="Tuyến đi (VD: Hà Nội - Nam Định)" />
-            <textarea placeholder="Ghi chú thêm (nếu có)" />
+          <a href="tel:0912203933" className="btn-main">
+            📞 GỌI NGAY
+          </a>
 
-            <button type="submit">GỬI YÊU CẦU</button>
-          </form>
+          <a
+            href="https://zalo.me/0912203933"
+            target="_blank"
+            className="btn-secondary"
+          >
+            💬 CHAT ZALO
+          </a>
+
+          <p className="cta-note">
+            ⏰ Hoạt động 24/7 – phản hồi nhanh
+          </p>
         </div>
 
       </div>

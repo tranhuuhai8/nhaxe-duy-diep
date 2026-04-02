@@ -13,7 +13,7 @@ export default function Header() {
       <div className="header-container">
         {/* BRAND */}
         <a href="#hero" className="header-brand" onClick={closeMenu}>
-          Xe ghép <strong>Minh Ngọc</strong>
+          🚗 Xe Ghép <strong>Duy Điệp</strong>
         </a>
 
         {/* DESKTOP NAV */}
@@ -26,9 +26,15 @@ export default function Header() {
         </nav>
 
         {/* ACTION */}
-        <a href="#booking" className="header-btn">
-          ĐẶT XE
-        </a>
+        <div className="header-actions">
+          <a href="tel:0379850465" className="header-hotline">
+            📞 0379 850 465
+          </a>
+
+          <a href="#booking" className="header-btn">
+            ĐẶT XE
+          </a>
+        </div>
 
         {/* MOBILE TOGGLE */}
         <button
@@ -43,23 +49,18 @@ export default function Header() {
       {/* MOBILE MENU */}
       {open && (
         <div className="mobile-menu">
-          <a href="#hero" onClick={closeMenu}>
-            Trang chủ
+          <a href="#hero" onClick={closeMenu}>Trang chủ</a>
+          <a href="#about" onClick={closeMenu}>Giới thiệu</a>
+          <a href="#services" onClick={closeMenu}>Dịch vụ</a>
+          <a href="#price" onClick={closeMenu}>Bảng giá</a>
+          <a href="#advantages" onClick={closeMenu}>Ưu điểm</a>
+
+          <a href="tel:0379850465" className="mobile-hotline" onClick={closeMenu}>
+            📞 Gọi ngay
           </a>
-          <a href="#about" onClick={closeMenu}>
-            Giới thiệu
-          </a>
-          <a href="#services" onClick={closeMenu}>
-            Dịch vụ
-          </a>
-          <a href="#price" onClick={closeMenu}>
-            Bảng giá
-          </a>
-          <a href="#advantages" onClick={closeMenu}>
-            Ưu điểm
-          </a>
+
           <a href="#booking" className="mobile-btn" onClick={closeMenu}>
-            ĐẶT XE
+            ĐẶT XE NGAY
           </a>
         </div>
       )}

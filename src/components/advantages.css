@@ -1,53 +1,63 @@
+/* ===== SECTION (NỀN XANH NHẠT) ===== */
 .advantages {
-  background: linear-gradient(135deg, #ff9800, #ffb300);
-  padding: 90px 0;
+  background: linear-gradient(135deg, #f8fafc, #eef6ff);
+  padding: 90px 20px;
 }
 
 .advantages-container {
   max-width: 1200px;
   margin: auto;
-  padding: 0 24px;
 }
 
-/* TITLE */
+/* ===== TITLE ===== */
 .advantages-title {
   text-align: center;
-  color: #fff;
-  font-size: 34px;
+  color: #1f2937;
+  font-size: 32px;
   font-weight: 900;
-  margin-bottom: 56px;
+  margin-bottom: 50px;
 }
 
-/* CONTENT */
+/* ===== CONTENT ===== */
 .advantages-content {
   display: flex;
   gap: 48px;
   align-items: center;
 }
 
-/* LEFT */
+/* ===== LEFT ===== */
 .advantages-list {
   flex: 1;
 }
 
 .adv-item {
-  background: #fff;
+  background: #ffffffcc;
+  backdrop-filter: blur(6px);
   display: flex;
   align-items: center;
   gap: 16px;
-  padding: 20px 22px;
-  margin-bottom: 18px;
+  padding: 18px 20px;
+  margin-bottom: 16px;
   border-radius: 14px;
-  font-size: 17px;
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.15);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  font-size: 15.5px;
+  color: #374151;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: all 0.25s ease;
 }
 
 .adv-item span {
   font-size: 22px;
 }
 
-/* RIGHT */
+/* HOVER */
+.adv-item:hover {
+  transform: translateY(-4px);
+  border-color: #ff7a00;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== RIGHT ===== */
 .advantages-right {
   flex: 1;
   text-align: center;
@@ -57,25 +67,31 @@
 .advantages-right img {
   width: 100%;
   border-radius: 14px;
-  margin-bottom: 22px;
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.25);
+  margin-bottom: 20px;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.15);
 }
 
 /* BUTTON */
 .hotline-btn {
   display: inline-block;
-  background: #ffeb3b;
-  color: #000;
-  padding: 14px 30px;
+  background: #ff7a00;
+  color: #fff;
+  padding: 14px 28px;
   border-radius: 999px;
-  font-weight: 900;
+  font-weight: 800;
   text-decoration: none;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
+  transition: 0.25s;
+}
+
+.hotline-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 122, 0, 0.3);
 }
 
 .note {
-  font-size: 14px;
-  color: #333;
+  font-size: 13px;
+  color: #6b7280;
 }
 
 /* ===== SCROLL ANIMATION ===== */
@@ -89,26 +105,26 @@
   transform: translateY(0);
 }
 
-/* MOBILE */
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
   .advantages {
-    padding: 80px 0;
+    padding: 70px 20px;
   }
 
   .advantages-title {
-    font-size: 26px;
+    font-size: 24px;
     line-height: 1.4;
-    margin-bottom: 40px;
+    margin-bottom: 36px;
   }
 
   .advantages-content {
     flex-direction: column;
-    gap: 36px;
+    gap: 32px;
   }
 
   .adv-item {
-    font-size: 15.5px;
-    padding: 18px 18px;
+    font-size: 14px;
+    padding: 16px;
   }
 
   .hotline-btn {

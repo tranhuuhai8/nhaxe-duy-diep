@@ -3,9 +3,10 @@ import './floating-contact.css'
 export default function FloatingContact() {
   return (
     <div className="floating-contact">
+
       {/* ZALO */}
       <a
-        href="https://zalo.me/0912203933"
+        href="https://zalo.me/0379850465"
         target="_blank"
         rel="noopener noreferrer"
         className="fc-circle zalo ring-strong"
@@ -20,7 +21,7 @@ export default function FloatingContact() {
 
       {/* PHONE */}
       <a
-        href="tel:0912203933"
+        href="tel:0379850465"
         className="fc-circle phone ring-strong"
         aria-label="Gọi điện"
       >
@@ -34,6 +35,7 @@ export default function FloatingContact() {
           <path d="M391.1 351.1c-27.4 0-54.3-4.3-80-12.7-8.1-2.7-17 .4-21.9 7.4l-34.4 43.5c-62.2-32.6-112.5-82.9-145.1-145.1l43.5-34.4c7-4.9 10.1-13.8 7.4-21.9-8.4-25.7-12.7-52.6-12.7-80C147.9 96.5 140.4 89 131.1 89H72.9C63.6 89 56 96.5 56 105.9 56 283.1 228.9 456 406.1 456c9.4 0 16.9-7.6 16.9-16.9v-58.1c0-9.4-7.6-16.9-16.9-16.9z" />
         </svg>
       </a>
+
     </div>
   )
 }

@@ -9,7 +9,7 @@
   z-index: 999;
 }
 
-/* BUTTON CHUNG */
+/* ===== BUTTON CHUNG ===== */
 .fc-circle {
   width: 60px;
   height: 60px;
@@ -23,7 +23,34 @@
   overflow: hidden;
 }
 
-/* ZALO FULL TRÒN */
+/* ===== HIỆU ỨNG SÓNG (QUAN TRỌNG) ===== */
+.fc-circle::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: inherit;
+  opacity: 0.4;
+  animation: pulseRing 2s infinite;
+  z-index: 0;
+}
+
+@keyframes pulseRing {
+  0% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  70% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ===== ZALO ===== */
 .fc-circle.zalo {
   background: #0068ff;
 }
@@ -31,41 +58,44 @@
 .zalo-logo {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* full hình tròn */
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
 }
 
-/* PHONE */
+/* ===== PHONE ===== */
 .fc-circle.phone {
   background: #22c55e;
 }
 
-/* ================= RUNG MẠNH HƠN ================= */
+.fc-circle svg {
+  position: relative;
+  z-index: 1;
+}
 
-@keyframes ringStrong {
+/* ===== RUNG MƯỢT ===== */
+@keyframes ringSmooth {
   0% { transform: rotate(0deg); }
-  10% { transform: rotate(25deg); }
-  20% { transform: rotate(-20deg); }
-  30% { transform: rotate(18deg); }
-  40% { transform: rotate(-14deg); }
-  50% { transform: rotate(10deg); }
-  60% { transform: rotate(-6deg); }
-  70% { transform: rotate(4deg); }
-  80% { transform: rotate(-2deg); }
+  15% { transform: rotate(20deg); }
+  30% { transform: rotate(-18deg); }
+  45% { transform: rotate(12deg); }
+  60% { transform: rotate(-8deg); }
+  75% { transform: rotate(4deg); }
   100% { transform: rotate(0deg); }
 }
 
 .ring-strong {
-  animation: ringStrong 1.2s infinite ease-in-out;
+  animation: ringSmooth 1.2s infinite ease-in-out;
   transform-origin: 50% 50%;
 }
 
-/* HOVER */
+/* ===== HOVER ===== */
 .fc-circle:hover {
-  transform: scale(1.1);
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+  transform: scale(1.12);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.35);
 }
 
-/* MOBILE */
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
   .floating-contact {
     right: 14px;

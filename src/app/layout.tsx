@@ -4,7 +4,7 @@ import Header from '../components/Header'
 import FloatingContact from '../components/FloatingContact'
 
 export const metadata = {
-  title: 'Xe ghép Minh Ngọc',
+  title: 'Xe ghép Duy Điệp',
   description: 'Xe tiện chuyến Hà Nội – Nam Định',
 }
 

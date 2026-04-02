@@ -1,87 +1,149 @@
 .price-section {
-  padding: 80px 0;
-  background: #fffaf3; /* nền cam nhạt đồng bộ */
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f8fafc, #eef6ff);
 }
 
 .price-container {
-  max-width: 900px;
+  max-width: 1100px;
   margin: auto;
+  text-align: center;
 }
 
+/* TITLE */
 .price-title {
-  text-align: center;
   font-size: 32px;
   font-weight: 800;
-  margin-bottom: 30px;
-  color: #333;
+  color: #1f2937;
 }
 
-/* TABLE */
-.price-table {
-  width: 100%;
-  border-collapse: collapse;
-  background: #fff;
-  box-shadow: 0 12px 30px rgba(255, 152, 0, 0.15);
-  border-radius: 10px;
-  overflow: hidden;
+.price-sub {
+  margin-top: 8px;
+  font-size: 15px;
+  color: #6b7280;
 }
 
-/* HEADER */
-.price-table thead {
-  background: linear-gradient(135deg, #ff9800, #ffb300);
-  color: #fff;
+/* LIST */
+.price-list {
+  margin-top: 36px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
 }
 
-.price-table th {
-  padding: 16px 20px;
-  font-size: 16px;
-  font-weight: 700;
-  text-transform: uppercase;
+/* ITEM */
+.price-item {
+  background: #ffffffcc;
+  backdrop-filter: blur(6px);
+  padding: 18px 22px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  transition: 0.25s;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
 
-/* BODY */
-.price-table td {
-  padding: 14px 20px;
-  font-size: 16px;
-  color: #333;
+.price-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
 }
 
-.price-table th:last-child,
-.price-table td:last-child {
-  text-align: right;
-  font-weight: 700;
+/* TEXT */
+.price-route {
+  font-weight: 600;
+  color: #374151;
 }
 
-/* ROW STYLE */
-.price-table tbody tr:nth-child(even) {
-  background: #fff3e0;
-}
-
-.price-table tbody tr:hover {
-  background: #ffe0b2;
-}
-
-/* HIGHLIGHT PRICE */
-.price-table .highlight {
-  color: #e65100;
+.price-value {
   font-weight: 800;
+  font-size: 16px;
+  color: #ff7a00;
+}
+
+/* ❌ BỎ HOÀN TOÀN highlight */
+.price-item.highlight {
+  all: unset;
+}
+
+/* 🔥 FIX: KHÔNG cho item cuối chạy lung tung nữa */
+.price-item:last-child {
+  grid-column: auto;
+  max-width: 100%;
+  margin: 0;
+}
+
+/* COMMIT */
+.price-commit {
+  margin-top: 40px;
+  background: #ffffffcc;
+  backdrop-filter: blur(6px);
+  padding: 18px;
+  border-radius: 12px;
+  font-size: 15px;
+  color: #374151;
+  line-height: 1.7;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* CTA */
+.price-actions {
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.price-hotline {
+  background: #0d6efd;
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.price-btn {
+  background: #ff7a00;
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 10px;
+  font-weight: 800;
+  text-decoration: none;
 }
 
 /* NOTE */
 .price-note {
-  margin-top: 16px;
-  font-size: 14px;
-  color: #666;
-  text-align: center;
+  margin-top: 18px;
+  font-size: 13px;
+  color: #6b7280;
 }
-@media (max-width: 576px) {
-  .price-table th,
-  .price-table td {
-    padding: 12px 10px;
-    font-size: 14px;
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .price-title {
+    font-size: 24px;
   }
 
-  .price-title {
-    font-size: 26px;
+  .price-list {
+    grid-template-columns: 1fr;
+  }
+
+  .price-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .price-actions {
+    flex-direction: column;
+  }
+
+  .price-hotline,
+  .price-btn {
+    width: 100%;
+    text-align: center;
   }
 }

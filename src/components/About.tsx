@@ -37,58 +37,61 @@ export default function AboutSection() {
   return (
     <section id="about" className="about-section">
       <div className="about-container">
+
         {/* LEFT – IMAGES */}
         <div ref={imgRef} className="about-images fade-up">
           <img
             src="xe-san-bay.jpg"
-            alt="Xe Minh Ngọc đón khách sân bay"
+            alt="Xe ghép Duy Điệp đón khách sân bay"
             className="img-main"
           />
           <img
             src="xe-don-khach.jpg"
-            alt="Nhà xe Minh Ngọc đón trả tận nơi"
+            alt="Xe ghép Duy Điệp đón trả tận nơi"
             className="img-sub"
           />
         </div>
 
         {/* RIGHT – CONTENT */}
         <div ref={textRef} className="about-content fade-up delay">
+
           <h4 className="about-subtitle">
-            ☰ XE TIỆN CHUYẾN HÀ NỘI ⇄ NAM ĐỊNH
+            🚗 XE GHÉP DUY ĐIỆP – ĐÓN TRẢ TẬN NƠI
           </h4>
 
           <h2 className="about-title">
-            AN TOÀN – TIỆN LỢI – NHANH CHÓNG <br />
-            LỊCH SỰ – CHU ĐÁO – NHIỆT TÌNH
+            NHANH CHÓNG – AN TOÀN – GIÁ HỢP LÝ <br />
+            PHỤC VỤ 24/7 – LUÔN SẴN SÀNG
           </h2>
 
           <p className="about-text">
-            <strong>Nhà xe Minh Ngọc</strong> là đơn vị hoạt động trong lĩnh vực
-            <strong> xe tiện chuyến Hà Nội – Nam Định</strong>, chuyên cung cấp
-            dịch vụ đưa đón hành khách tận nơi với tiêu chí an toàn và đúng giờ.
-            Chúng tôi luôn nỗ lực mang đến trải nghiệm di chuyển thuận tiện,
-            giá cả hợp lý, phù hợp với mọi đối tượng khách hàng.
+            <strong>Xe Ghép Duy Điệp</strong> chuyên cung cấp dịch vụ xe ghép,
+            xe tiện chuyến từ Hà Nội đi các tỉnh và ngược lại. Với đội xe đời
+            mới, tài xế kinh nghiệm và thái độ phục vụ tận tâm, chúng tôi cam
+            kết mang đến trải nghiệm di chuyển an toàn, đúng giờ và thoải mái
+            cho mọi khách hàng.
           </p>
 
           <ul className="about-list">
             <li>
-              ✔ Chạy <strong>LIÊN TỤC</strong> mỗi ngày, phục vụ{' '}
-              <strong>24/7</strong>
+              ✔ Chạy <strong>LIÊN TỤC 24/7</strong> – gọi là có xe
             </li>
             <li>
-              ✔ <strong>30 phút / 1 chuyến</strong> – Đón trả{' '}
-              <strong>TẬN NƠI</strong>
+              ✔ Đón trả <strong>TẬN NƠI</strong> – không cần trung chuyển
             </li>
             <li>
-              ✔ <strong>MIỄN PHÍ</strong> trẻ em dưới 5 tuổi
+              ✔ Xe sạch sẽ – tài xế thân thiện – hỗ trợ nhiệt tình
             </li>
-            <li>✔ Nhận bao xe, gửi hàng, thuê xe du lịch theo yêu cầu</li>
+            <li>
+              ✔ Nhận bao xe riêng, gửi hàng, đi tỉnh theo yêu cầu
+            </li>
           </ul>
 
-          <a href="tel:0912203933" className="about-btn">
-            ĐẶT XE NGAY
+          <a href="tel:0379850465" className="about-btn">
+            📞 GỌI ĐẶT XE NGAY
           </a>
         </div>
+
       </div>
     </section>
   )

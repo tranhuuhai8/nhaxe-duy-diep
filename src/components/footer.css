@@ -1,8 +1,11 @@
+/* ===== FOOTER ===== */
 .footer {
-  background: linear-gradient(135deg, #e65100, #ff9800);
-  color: #fff;
+  background: linear-gradient(135deg, #f8fafc, #eef6ff);
+  color: #1f2937;
+  border-top: 1px solid #e5e7eb;
 }
 
+/* CONTAINER */
 .footer-container {
   max-width: 1200px;
   margin: auto;
@@ -13,50 +16,57 @@
   gap: 30px;
 }
 
+/* LEFT */
 .footer-left h3 {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 800;
   margin-bottom: 10px;
+  color: #ff7a00;
 }
 
 .footer-left p {
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.6;
-  color: #fffde7;
+  color: #4b5563;
 }
 
+/* RIGHT */
 .footer-right {
   text-align: right;
 }
 
 .footer-right p {
   margin: 0;
-  font-size: 14px;
+  font-size: 13px;
   letter-spacing: 1px;
+  color: #6b7280;
 }
 
+/* HOTLINE */
 .footer-hotline {
   display: inline-block;
   margin-top: 8px;
   font-size: 22px;
   font-weight: 900;
-  color: #ffeb3b;
+  color: #0d6efd;
   text-decoration: none;
+  transition: 0.25s;
 }
 
 .footer-hotline:hover {
-  text-decoration: underline;
+  color: #ff7a00;
 }
 
+/* BOTTOM */
 .footer-bottom {
   text-align: center;
-  padding: 12px 10px;
-  background: rgba(0, 0, 0, 0.15);
+  padding: 14px 10px;
+  background: #e5edff;
   font-size: 13px;
-  color: #fffde7;
+  color: #6b7280;
 }
 
-/* RESPONSIVE */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
@@ -67,6 +77,7 @@
     text-align: center;
   }
 }
+
 @media (max-width: 576px) {
   .footer-hotline {
     font-size: 20px;

@@ -1,20 +1,17 @@
 .hero {
   position: relative;
   min-height: 100vh;
-  padding: 96px 0 40px; /* 👈 sát header */
-  background: linear-gradient(135deg, #fff3c4, #ffc83d);
+  padding: 96px 0 40px;
+  background: linear-gradient(135deg, #f8fafc, #eef6ff);
   overflow: hidden;
 }
 
-/* NỀN */
+/* NỀN HIỆU ỨNG */
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: radial-gradient(
-    circle at left top,
-    rgba(255, 255, 255, 0.45),
-    transparent 60%
-  );
+  background: radial-gradient(circle at top left, #ff7a0020, transparent 40%),
+              radial-gradient(circle at bottom right, #0d6efd20, transparent 40%);
 }
 
 /* CONTAINER */
@@ -25,8 +22,8 @@
   padding: 0 20px;
   display: grid;
   grid-template-columns: 1fr 1.2fr;
-  align-items: start; /* 👈 không đẩy xuống */
-  gap: 32px;
+  align-items: center;
+  gap: 40px;
 }
 
 /* ================= TEXT ================= */
@@ -34,70 +31,95 @@
   max-width: 560px;
 }
 
+.hero-badge {
+  display: inline-block;
+  background: #ff7a00;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+/* TITLE */
 .hero-content h1 {
-  font-size: 56px;
+  font-size: 48px;
   font-weight: 900;
-  line-height: 1.15;
+  line-height: 1.2;
   margin-bottom: 10px;
+  color: #1f2937;
 }
 
 .hero-content h1 span {
-  white-space: nowrap;
+  color: #ff7a00;
 }
 
+/* DESC */
 .hero-desc {
   font-size: 16px;
   margin-bottom: 10px;
-  color: #333;
+  color: #4b5563;
 }
 
+/* 🔥 PRICE (MỚI) */
 .hero-price {
-  font-size: 17px;
-  margin-bottom: 14px;
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: #111;
 }
 
 .hero-price strong {
   font-size: 26px;
-  color: #c62828;
+  color: #ff7a00;
 }
 
-/* SERVICE BOX */
-.hero-service-box {
-  background: #fff;
-  padding: 12px 16px;
-  border-left: 5px solid #000;
+/* BOX NỘI DUNG */
+.hero-highlight {
+  background: #ffffffcc;
+  backdrop-filter: blur(6px);
+  padding: 14px 16px;
   border-radius: 12px;
   font-size: 14px;
-  margin-bottom: 18px;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+  margin-bottom: 22px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  color: #374151;
+  line-height: 1.6;
 }
 
 /* CTA */
 .hero-actions {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .hero-hotline {
-  background: #111;
+  background: #0d6efd;
   color: #fff;
   padding: 14px 18px;
-  border-radius: 14px;
-  font-size: 16px;
+  border-radius: 10px;
+  font-size: 15px;
   font-weight: 700;
-  text-align: center;
   text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero-hotline:hover {
+  transform: translateY(-2px);
 }
 
 .hero-btn {
-  background: #fff;
-  color: #000;
+  background: #ff7a00;
+  color: #fff;
   padding: 14px 18px;
-  border-radius: 999px;
+  border-radius: 10px;
   font-weight: 800;
-  text-align: center;
   text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  transform: translateY(-2px);
 }
 
 /* ================= CAR ================= */
@@ -108,26 +130,26 @@
 }
 
 .hero-image img {
-  width: 150%;
-  max-width: 820px;
+  width: 135%;
+  max-width: 780px;
 }
 
 .car-pro {
-  filter: drop-shadow(0 40px 50px rgba(0, 0, 0, 0.35));
+  filter: drop-shadow(0 35px 45px rgba(0, 0, 0, 0.25));
   transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
     filter 0.6s ease;
 }
 
 .hero-image:hover .car-pro {
-  transform: translateY(-12px) rotateZ(-1deg) scale(1.02);
-  filter: drop-shadow(0 60px 75px rgba(0, 0, 0, 0.45));
+  transform: translateY(-10px) scale(1.02);
+  filter: drop-shadow(0 55px 70px rgba(0, 0, 0, 0.35));
 }
 
-/* SCROLL (desktop) */
+/* SCROLL */
 .scroll-reveal {
   opacity: 0;
-  transform: translateX(120px) scale(0.95);
-  transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  transform: translateX(100px) scale(0.96);
+  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .scroll-reveal.show {
@@ -135,21 +157,21 @@
   transform: translateX(0) scale(1);
 }
 
-/* ================= MOBILE TỐI ƯU ================= */
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
   .hero {
     min-height: auto;
-    padding: 64px 0 28px; /* 👈 kéo sát header tối đa */
+    padding: 64px 0 28px;
   }
 
   .hero-container {
     grid-template-columns: 1fr;
     text-align: center;
-    gap: 18px;
+    gap: 20px;
   }
 
   .hero-content h1 {
-    font-size: 32px;
+    font-size: 30px;
   }
 
   .hero-desc {
@@ -160,26 +182,26 @@
     font-size: 22px;
   }
 
-  .hero-service-box {
+  .hero-highlight {
     font-size: 13px;
-    padding: 10px 12px;
+    padding: 12px;
   }
 
   .hero-actions {
-    gap: 10px;
+    justify-content: center;
   }
 
   .hero-image {
     justify-content: center;
-    margin-top: -50px; /* 👈 kéo xe lên */
+    margin-top: -40px;
   }
 
   .hero-image img {
-    width: 92%;
-    max-width: 320px;
+    width: 90%;
+    max-width: 300px;
   }
 
-  /* Mobile: bỏ animation */
+  /* Mobile bỏ animation */
   .scroll-reveal,
   .scroll-reveal.show {
     opacity: 1;

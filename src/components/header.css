@@ -2,10 +2,12 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: linear-gradient(90deg, #ffb300, #ffc83d);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #eee;
 }
 
+/* CONTAINER */
 .header-container {
   max-width: 1300px;
   margin: auto;
@@ -19,16 +21,16 @@
 /* BRAND */
 .header-brand {
   font-size: 18px;
-  font-weight: 600;
-  color: #000;
+  font-weight: 700;
+  color: #1f2937;
   text-decoration: none;
 }
 
 .header-brand strong {
-  font-weight: 900;
+  color: #ff7a00;
 }
 
-/* NAV DESKTOP */
+/* NAV */
 .header-nav {
   display: flex;
   justify-content: center;
@@ -36,12 +38,18 @@
 }
 
 .header-nav a {
-  color: #000;
+  color: #374151;
   font-weight: 600;
   text-decoration: none;
   position: relative;
+  transition: 0.3s;
 }
 
+.header-nav a:hover {
+  color: #ff7a00;
+}
+
+/* underline effect */
 .header-nav a::after {
   content: '';
   position: absolute;
@@ -49,7 +57,7 @@
   bottom: -4px;
   width: 0;
   height: 2px;
-  background: #000;
+  background: #ff7a00;
   transition: 0.3s;
 }
 
@@ -57,17 +65,43 @@
   width: 100%;
 }
 
-/* BUTTON */
-.header-btn {
-  background: #000;
-  color: #fff;
-  padding: 10px 26px;
-  border-radius: 10px;
-  font-weight: 800;
-  text-decoration: none;
+/* ACTION */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-/* TOGGLE MOBILE */
+.header-hotline {
+  background: #0d6efd;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.header-hotline:hover {
+  opacity: 0.9;
+}
+
+.header-btn {
+  background: #ff7a00;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.header-btn:hover {
+  opacity: 0.9;
+}
+
+/* TOGGLE */
 .header-toggle {
   display: none;
   background: none;
@@ -88,7 +122,7 @@
   }
 
   .header-nav,
-  .header-btn {
+  .header-actions {
     display: none;
   }
 
@@ -101,23 +135,33 @@
     flex-direction: column;
     gap: 14px;
     padding: 18px 20px 24px;
-    background: linear-gradient(180deg, #ffb300, #ffc83d);
+    background: #ffffff;
+    border-top: 1px solid #eee;
   }
 
   .mobile-menu a {
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 16px;
+    font-weight: 600;
     text-decoration: none;
-    color: #000;
+    color: #374151;
+  }
+
+  .mobile-hotline {
+    background: #0d6efd;
+    color: #fff !important;
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 700;
   }
 
   .mobile-btn {
-    margin-top: 10px;
-    background: #000;
+    margin-top: 6px;
+    background: #ff7a00;
     color: #fff !important;
     text-align: center;
-    padding: 14px;
-    border-radius: 10px;
-    font-weight: 900;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 800;
   }
 }

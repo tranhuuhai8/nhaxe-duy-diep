@@ -5,25 +5,28 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-container">
 
+        {/* LEFT */}
         <div className="footer-left">
-          <h3>NHÀ XE MINH NGỌC</h3>
+          <h3>XE GHÉP DUY ĐIỆP</h3>
           <p>
-            Chuyên xe tiện chuyến Hà Nội ⇄ Nam Định <br />
-            Đón trả tận nơi – An toàn – Uy tín – Giá tốt
+            Chuyên xe ghép Hà Nội ⇄ Nam Định <br />
+            Đón tận nơi – Đi ngay – Giá hợp lý
           </p>
         </div>
 
+        {/* RIGHT */}
         <div className="footer-right">
           <p>HOTLINE</p>
-          <a href="tel:0912203933" className="footer-hotline">
-            0912 203 933
+          <a href="tel:0379850465" className="footer-hotline">
+            0379 850 465
           </a>
         </div>
 
       </div>
 
+      {/* BOTTOM */}
       <div className="footer-bottom">
-        © {new Date().getFullYear()} Nhà xe Minh Ngọc. All rights reserved.
+        © {new Date().getFullYear()} Xe Ghép Duy Điệp. All rights reserved.
       </div>
     </footer>
   )
