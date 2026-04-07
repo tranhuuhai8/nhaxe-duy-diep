@@ -30,12 +30,12 @@ export default function BookingForm() {
         <div className="booking-cta">
           <h3>ĐẶT XE NGAY</h3>
 
-          <a href="tel:0912203933" className="btn-main">
+          <a href="tel:0379850465" className="btn-main">
             📞 GỌI NGAY
           </a>
 
           <a
-            href="https://zalo.me/0912203933"
+            href="https://zalo.me/0379850465"
             target="_blank"
             className="btn-secondary"
           >
